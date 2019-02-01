@@ -8,7 +8,7 @@ class AppointmentResource extends Component {
     
     console.log(appointment);
     return(
-      <div>
+      <div style={{'border': '2px solid blue', 'padding': '0.5em', 'borderRadius': '1em'}}>
         <h1>Appointment</h1>
         <p>
           <b>Description: </b> {appointment.description}
