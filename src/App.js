@@ -8,11 +8,17 @@ class App extends Component {
     return (
       // SmartSearch allows you to define a query
       // The results of that query are then passed to its children as props.results
-      <SmartSearch query={{ type: 'Appointment' }}>
+
+      // Now just queries appointments for one patient (Shelby)
+      
+      <div>
+
+      <SmartSearch query={{ type: 'Appointment', query: { 'actor': 'Patient/d0d0cde0-4b21-42f6-9c1e-bfa447d72059' }}}>
         <ResourceList>
           <AppointmentResource />
         </ResourceList>
       </SmartSearch>
+      </div>
     )
   }
 }

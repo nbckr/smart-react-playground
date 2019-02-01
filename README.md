@@ -1,3 +1,7 @@
+# Important
+Currently only works when you run `yarn start` and then manually visit `localhost:3000/launch.html`.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
