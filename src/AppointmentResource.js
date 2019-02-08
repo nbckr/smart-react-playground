@@ -1,29 +1,29 @@
-import React, { Component } from 'react' // var Component = React.Component; in browser
+import React, {Component} from 'react' // var Component = React.Component; in browser
 
 class AppointmentResource extends Component {
-  
+
   render() {
     // FHIR resources will be passed in as props.resource
     const appointment = this.props.resource;
-    
-    console.log(appointment);
-    return(
+    console.log("Appointment created with resource:", appointment);
+
+    return (
       <div style={{'border': '2px solid blue', 'padding': '0.5em', 'borderRadius': '1em'}}>
-        <h1>Appointment</h1>
+        <h1>Appointment {appointment.id}</h1>
         <p>
-          <b>Description: </b> {appointment.description}
+          <b>Reason: </b> {appointment.reason[0].coding[0].display}
         </p>
         <p>
-        <b>From:        </b> {appointment.start}
+          <b>Patient: </b> {appointment.participant[0].actor.reference}
         </p>
         <p>
-        <b>To:          </b> {appointment.end}
+          <b>From: </b> {appointment.start}
         </p>
 
       </div>
     )
   }
-  
+
 }
 
 export default AppointmentResource;
