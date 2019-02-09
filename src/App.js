@@ -1,10 +1,14 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import SmartQueryTest from "./SmartQueryTest";
+import SmartLaunchTest from "./SmartLaunchTest";
 
 class App extends Component {
     render() {
         return (
-          <SmartQueryTest/>
+          <Fragment>
+              <SmartLaunchTest/>
+              <SmartQueryTest/>
+          </Fragment>
         )
     }
 }
