@@ -16,8 +16,9 @@ class SmartLaunchTest extends Component {
     FHIR.oauth2.authorize({
       "client": {
         "client_id": "my_web_app",
-        "scope":  "patient/*.read launch/patient"
+        "scope":  "patient/*.read launch/patient launch/todo openid fhirUser"
       },
+      //"server": "https://launch.smarthealthit.org/v/r3/sim/eyJoIjoiMSIsImIiOiJkMGQwY2RlMC00YjIxLTQyZjYtOWMxZS1iZmE0NDdkNzIwNTkiLCJlIjoic21hcnQtUHJhY3RpdGlvbmVyLTcyMDgwNDE2In0/fhir"
       "server": "https://launch.smarthealthit.org/v/r3/sim/eyJrIjoiMSIsImIiOiJkMGQwY2RlMC00YjIxLTQyZjYtOWMxZS1iZmE0NDdkNzIwNTkifQ/fhir"
     });
 
