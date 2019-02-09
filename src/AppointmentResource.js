@@ -11,10 +11,10 @@ class AppointmentResource extends Component {
       <div style={{'border': '2px solid blue', 'padding': '0.5em', 'borderRadius': '1em'}}>
         <h1>Appointment {appointment.id}</h1>
         <p>
-          <b>Reason: </b> {appointment.reason[0].coding[0].display}
+          <b>Reason: </b> {appointment.reason && appointment.reason[0].coding[0].display}
         </p>
         <p>
-          <b>Patient: </b> {appointment.participant[0].actor.reference}
+          <b>Patient: </b> {appointment.participant && appointment.participant[0].actor.reference}
         </p>
         <p>
           <b>From: </b> {appointment.start}
